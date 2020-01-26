@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css" />
+    </head>
+    <body>
+        <div id="sample-heatmap"></div>
+        <br>
+        <form action = "http://localhost:5000/1.html" method = "POST" 
+         enctype = "multipart/form-data">
+            <input type = "file" name = "file" />
+            <input type = "submit"/>
+        </form>
+        <p>Из вашего годового списка вы можете подать совместную заявку на:</p>
+        <form action = "http://localhost:5000/paper.html" method = "POST"
+        enctype = "multipart/form-data"> 
+            <button>тупое гавно</button>
+        </form>  
+    </body>
+    <script type="text/javascript">
+        var cal = new CalHeatMap();
+        
+        cal.init({
+            itemSelector: '#sample-heatmap',
+            domain: "month",
+            data: "year.json",
+            start: new Date(2018, 0),
+            legend: [44, 266, 329, 429, 500],
+        });
+    </script>
+    <script
+</html>
